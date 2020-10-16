@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "search.engine.key",
+      "type": "java.lang.String",
+      "description": "Description for search.engine.key."
+  }
+] }
