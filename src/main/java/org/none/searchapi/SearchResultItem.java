@@ -9,16 +9,16 @@ import java.util.Objects;
 public class SearchResultItem {
 private String title;
 private String link;
-private String keyword;
+private String keywords;
 private String text;
 
     public SearchResultItem() {
     }
 
-    public SearchResultItem(String title, String link, String keyword, String text) {
+    public SearchResultItem(String title, String link, String keywords, String text) {
         this.title = title;
         this.link = link;
-        this.keyword = keyword;
+        this.keywords = keywords;
         this.text = text;
     }
 
@@ -38,12 +38,12 @@ private String text;
         this.link = link;
     }
 
-    public String getKeyword() {
-        return keyword;
+    public String getKeywords() {
+        return keywords;
     }
 
-    public void setKeyword(String keyword) {
-        this.keyword = keyword;
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
     }
 
     public String getText() {
@@ -61,13 +61,13 @@ private String text;
         SearchResultItem that = (SearchResultItem) o;
         return Objects.equals(getTitle(), that.getTitle()) &&
                 Objects.equals(getLink(), that.getLink()) &&
-                Objects.equals(getKeyword(), that.getKeyword()) &&
+                Objects.equals(getKeywords(), that.getKeywords()) &&
                 Objects.equals(getText(), that.getText());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getTitle(), getLink(), getKeyword(), getText());
+        return Objects.hash(getTitle(), getLink(), getKeywords(), getText());
     }
 
     @Override
@@ -75,7 +75,7 @@ private String text;
         return "SearchResultItem{" +
                 "title='" + title + '\'' +
                 ", link='" + link + '\'' +
-                ", keyword='" + keyword + '\'' +
+                ", keyword='" + keywords + '\'' +
                 ", text='" + text + '\'' +
                 '}';
     }
